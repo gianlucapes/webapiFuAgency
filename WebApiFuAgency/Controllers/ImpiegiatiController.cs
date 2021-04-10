@@ -21,6 +21,7 @@ namespace WebApiFuAgency.Controllers
         [HttpGet("{entrepriseId:length(10):regex(entr(id|pr))}")]
         public ActionResult GetImpiegatiByEntrepriseId(string entrepriseId)
         {
+            //mocke per verficare le funzioni
             var impiegato = new List<ImpiegatoModel>()
             {
                new ImpiegatoModel { Id = 1,EntrepriseId = entrepriseId,Nome = "Nome Di prova",Cognome = "oktagon"}
