@@ -12,15 +12,19 @@ namespace WebApiFuAgency.Controllers
     public class DipartimentiController : ControllerBase
     {
         [HttpGet("{id:int:min(1)}")]
-        public string GetById(int id)
+        public ActionResult GetById(int id)
         {
-            return "Dipartimento Id : " + id;
+            return NotFound("Non ancora implementato");
         }
         [HttpGet("{nome:minlength(3):maxlength(20):alpha}")]
-        public string GetByNomeDipartimento(string nome)
+        public ActionResult GetByNomeDipartimento(string nome)
         {
 
-            return "Dipartimento nome : " + nome;
+            return NotFound("Non ancora implementato");
+        }
+        public ActionResult GetByGeoCode(string geocode)
+        {
+            return Unauthorized();
         }
     }
 }
