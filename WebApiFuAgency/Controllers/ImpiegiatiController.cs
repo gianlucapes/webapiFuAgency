@@ -26,7 +26,9 @@ namespace WebApiFuAgency.Controllers
             {
                new ImpiegatoModel { Id = 1,EntrepriseId = entrepriseId,Nome = "Nome Di prova",Cognome = "oktagon"}
             };
-            return Ok(impiegato);
+            if (impiegato != null)
+                return Ok(impiegato);
+            else return NotFound($"Non è stato trovato nessun impiegato con {entrepriseId}");
         }
         [HttpGet("GetImpiegatiByNome/{nome}")]
         public string GetImpiegatoByNome(string nome)
