@@ -1,0 +1,9 @@
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp3.1\Employee.deps.json
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp3.1\Employee.dll
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp3.1\Employee.pdb
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp3.1\Employee.csprojAssemblyReference.cache
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp3.1\Employee.AssemblyInfoInputs.cache
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp3.1\Employee.AssemblyInfo.cs
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp3.1\Employee.csproj.CoreCompileInputs.cache
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp3.1\Employee.dll
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp3.1\Employee.pdb

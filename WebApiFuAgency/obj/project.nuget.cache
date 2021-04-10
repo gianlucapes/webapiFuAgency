@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "1VFBBvslwDIek6EyZc7/PeByCFZ0vkt8q29IXAIvxDq5GzahEvwW048WhKnoFTLdABmx93HTGblMHwd0g3helg==",
+  "success": true,
+  "projectFilePath": "C:\\angular\\WebApiFuAgency\\WebApiFuAgency\\WebApiFuAgency.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pesgi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\pesgi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\pesgi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.1.2\\swashbuckle.aspnetcore.6.1.2.nupkg.sha512",
+    "C:\\Users\\pesgi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.1.2\\swashbuckle.aspnetcore.swagger.6.1.2.nupkg.sha512",
+    "C:\\Users\\pesgi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.1.2\\swashbuckle.aspnetcore.swaggergen.6.1.2.nupkg.sha512",
+    "C:\\Users\\pesgi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.1.2\\swashbuckle.aspnetcore.swaggerui.6.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,13 @@
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\netcoreapp3.1\WebApiFuAgency.exe
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\netcoreapp3.1\WebApiFuAgency.deps.json
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\netcoreapp3.1\WebApiFuAgency.runtimeconfig.json
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\netcoreapp3.1\WebApiFuAgency.runtimeconfig.dev.json
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\netcoreapp3.1\WebApiFuAgency.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\netcoreapp3.1\WebApiFuAgency.pdb
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.csprojAssemblyReference.cache
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.AssemblyInfoInputs.cache
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.AssemblyInfo.cs
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.csproj.CoreCompileInputs.cache
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.pdb
+C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\netcoreapp3.1\WebApiFuAgency.genruntimeconfig.cache
