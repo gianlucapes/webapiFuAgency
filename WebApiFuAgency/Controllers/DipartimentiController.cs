@@ -22,6 +22,7 @@ namespace WebApiFuAgency.Controllers
 
             return NotFound("Non ancora implementato");
         }
+        [HttpGet("{geocode}")]
         public ActionResult GetByGeoCode(string geocode)
         {
             return Unauthorized();

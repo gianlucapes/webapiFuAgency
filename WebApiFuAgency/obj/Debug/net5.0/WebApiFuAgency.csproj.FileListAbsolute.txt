@@ -25,6 +25,5 @@ C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Swashbuckle.AspNetCore
 C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.MvcApplicationPartsAssemblyInfo.cs
 C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.csproj.CopyComplete
 C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.csprojAssemblyReference.cache
-C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\.filenesting.json
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Employee.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Employee.pdb
