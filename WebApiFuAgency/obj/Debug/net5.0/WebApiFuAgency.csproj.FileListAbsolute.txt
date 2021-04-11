@@ -27,3 +27,6 @@ C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.csproj.
 C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.csprojAssemblyReference.cache
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Employee.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Employee.pdb
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Newtonsoft.Json.dll

@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Employee.Models
 {
+   
    public class ImpiegatoModel
     {
        public int Id { get; set; }

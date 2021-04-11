@@ -14,18 +14,24 @@ namespace WebApiFuAgency.Controllers
         [HttpGet("{id:int:min(1)}")]
         public ActionResult GetById(int id)
         {
-            return NotFound("Non ancora implementato");
+            return Ok("Non ancora implementato");
         }
         [HttpGet("{nome:minlength(3):maxlength(20):alpha}")]
         public ActionResult GetByNomeDipartimento(string nome)
         {
 
-            return NotFound("Non ancora implementato");
+            return Ok("Nome del dipartimento");
         }
         [HttpGet("{geocode}")]
         public ActionResult GetByGeoCode(string geocode)
         {
-            return Unauthorized();
+            return Ok("By Geo code");
+        }
+
+        [HttpGet]
+        public ActionResult GetAllInfo()
+        {
+            return Ok("Tutte le informazioni");
         }
     }
 }

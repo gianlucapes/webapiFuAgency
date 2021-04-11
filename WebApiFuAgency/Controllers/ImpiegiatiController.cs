@@ -1,4 +1,5 @@
 ﻿using Employee.Models;
+using Employee.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,10 +13,18 @@ namespace WebApiFuAgency.Controllers
     [ApiController]
     public class ImpiegiatiController : ControllerBase
     {
-        [HttpGet]
-        public string GetAllImpiegati()
+        private readonly ImpiegatiRepository _impiegatiRepository;
+
+        public ImpiegiatiController()
         {
-            return "all impiegati";
+            _impiegatiRepository = new ImpiegatiRepository();
+        }
+      
+        [HttpGet]
+        public ActionResult GetAllImpiegati()
+        {
+            var impiegati = _impiegatiRepository.GetAllImpiegati();
+            return Ok(impiegati);
         }
 
         [HttpGet("{entrepriseId:length(10):regex(entr(id|pr))}")]
@@ -39,6 +48,16 @@ namespace WebApiFuAgency.Controllers
         public string SearcheImpiegato(string entId,string nome,string qualifica,string telefono)
         {
             return "Scheda dell'impiegato";
+        }
+       
+        [HttpPost("")]
+        public ActionResult AddImpiegato([FromBody] ImpiegatoModel impiegato)
+        {
+            _impiegatiRepository.AddImpiegato(impiegato);
+
+            var impiegati = _impiegatiRepository.GetAllImpiegati();
+
+            return Ok(impiegati);
         }
     }
 }
