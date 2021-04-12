@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\pesgi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pesgi\\.nuget\\packages"
+    ]
+  }
+}

@@ -8,9 +8,8 @@ namespace Employee.Models
    
    public class ImpiegatoModel
     {
-       public int Id { get; set; }
 
-       public string EntrepriseId { get; set; }
+       public int EntrepriseId { get; set; }
 
        public string Nome { get; set; }
 
@@ -19,5 +18,7 @@ namespace Employee.Models
         public string Qualifica { get; set; }
 
         public string Telefono { get; set; }
+
+        public int RackingPoints { get; set; }
     }
 }

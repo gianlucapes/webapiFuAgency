@@ -13,51 +13,20 @@ namespace WebApiFuAgency.Controllers
     [ApiController]
     public class ImpiegiatiController : ControllerBase
     {
-        private readonly ImpiegatiRepository _impiegatiRepository;
+        private readonly IImpiegatiRepository _impiegatiRepository;
 
-        public ImpiegiatiController()
+        public ImpiegiatiController(IImpiegatiRepository impiegatiRepository)
         {
-            _impiegatiRepository = new ImpiegatiRepository();
+            _impiegatiRepository = impiegatiRepository;
         }
-      
-        [HttpGet]
-        public ActionResult GetAllImpiegati()
+
+        [HttpGet("")]
+        public async Task<IActionResult> GetAllImpiegati()
         {
-            var impiegati = _impiegatiRepository.GetAllImpiegati();
+            var impiegati = await _impiegatiRepository.GetAllImpiegati();
             return Ok(impiegati);
         }
 
-        [HttpGet("{entrepriseId:length(10):regex(entr(id|pr))}")]
-        public ActionResult GetImpiegatiByEntrepriseId(string entrepriseId)
-        {
-            //mocke per verficare le funzioni
-            var impiegato = new List<ImpiegatoModel>()
-            {
-               new ImpiegatoModel { Id = 1,EntrepriseId = entrepriseId,Nome = "Nome Di prova",Cognome = "oktagon"}
-            };
-            if (impiegato != null)
-                return Ok(impiegato);
-            else return NotFound($"Non è stato trovato nessun impiegato con {entrepriseId}");
-        }
-        [HttpGet("GetImpiegatiByNome/{nome}")]
-        public string GetImpiegatoByNome(string nome)
-        {
-            return "Impiegato :"+nome;
-        }
-        [HttpGet("SearcheImpiegato")]
-        public string SearcheImpiegato(string entId,string nome,string qualifica,string telefono)
-        {
-            return "Scheda dell'impiegato";
-        }
-       
-        [HttpPost("")]
-        public ActionResult AddImpiegato([FromBody] ImpiegatoModel impiegato)
-        {
-            _impiegatiRepository.AddImpiegato(impiegato);
 
-            var impiegati = _impiegatiRepository.GetAllImpiegati();
-
-            return Ok(impiegati);
-        }
-    }
+  }
 }

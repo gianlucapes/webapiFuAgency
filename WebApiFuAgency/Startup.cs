@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Employee.Data;
+using Employee.Repository;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,6 +33,10 @@ namespace WebApiFuAgency
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApiFuAgency", Version = "v1" });
             });
             services.AddHealthChecks();
+
+            services.AddTransient<IImpiegatiRepository, ImpiegatiRepository>();
+
+            services.AddDbContext<ImpiegatiContext>(option => option.UseSqlServer(Configuration.GetConnectionString("FuAgency"), b => b.MigrationsAssembly("WebApiFuAgency")));
 
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

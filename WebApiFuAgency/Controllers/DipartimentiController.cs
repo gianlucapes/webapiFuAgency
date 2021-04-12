@@ -11,27 +11,6 @@ namespace WebApiFuAgency.Controllers
     [ApiController]
     public class DipartimentiController : ControllerBase
     {
-        [HttpGet("{id:int:min(1)}")]
-        public ActionResult GetById(int id)
-        {
-            return Ok("Non ancora implementato");
-        }
-        [HttpGet("{nome:minlength(3):maxlength(20):alpha}")]
-        public ActionResult GetByNomeDipartimento(string nome)
-        {
-
-            return Ok("Nome del dipartimento");
-        }
-        [HttpGet("{geocode}")]
-        public ActionResult GetByGeoCode(string geocode)
-        {
-            return Ok("By Geo code");
-        }
-
-        [HttpGet]
-        public ActionResult GetAllInfo()
-        {
-            return Ok("Tutte le informazioni");
-        }
+        
     }
 }
