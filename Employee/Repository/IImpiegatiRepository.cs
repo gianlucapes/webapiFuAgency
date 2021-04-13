@@ -6,9 +6,10 @@ namespace Employee.Repository
 {
     public interface IImpiegatiRepository
     {
-        int AddImpiegato(ImpiegatoModel impiegato);
         public Task<List<ImpiegatoModel>> GetAllImpiegati();
 
-        ImpiegatoModel GetImpiegatoByNome(string nome);
+        public Task<ImpiegatoModel> GetImpiegatoByEntrId(int entrId);
+
+        public Task<int> AddImpiegato(ImpiegatoModel impiegato);
     }
 }

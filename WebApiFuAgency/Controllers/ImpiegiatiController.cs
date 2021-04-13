@@ -27,6 +27,21 @@ namespace WebApiFuAgency.Controllers
             return Ok(impiegati);
         }
 
+        [HttpGet("{entrId}")]
+        public async Task<IActionResult> GetImpiegatoByEntrId([FromRoute] int entrId)
+        {
+            var impiegato = await _impiegatiRepository.GetImpiegatoByEntrId(entrId);
+            return Ok(impiegato);
+        }
 
-  }
+        [HttpPost("")]
+        public async Task<IActionResult> AddImpiegato([FromBody] ImpiegatoModel impiegatoModel)
+        {
+            var entrId = await _impiegatiRepository.AddImpiegato(impiegatoModel);
+            return CreatedAtAction(nameof(GetImpiegatoByEntrId), new { entrId = entrId , controller = "Impiegiati" } , entrId);
+            
+        }
+
+
+    }
 }
