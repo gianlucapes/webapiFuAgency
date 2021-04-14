@@ -64,5 +64,23 @@ namespace Employee.Repository
 
             return records;
         }
+
+        public async Task UpdateImpiegato(int entrId, ImpiegatoModel impiegatoModel)
+        {
+            var _impiegato = new Impiegato()
+            {
+                EntrepriseId = entrId,
+                Nome = impiegatoModel.Nome,
+                Cognome = impiegatoModel.Cognome,
+                Qualifica = impiegatoModel.Qualifica,
+                RakingPoints = impiegatoModel.RackingPoints,
+                Telefono = impiegatoModel.Telefono
+            };
+
+            _impiegatiContext.Impiegato.Update(_impiegato);
+            await _impiegatiContext.SaveChangesAsync();
+         
+
+        }
     }
 }

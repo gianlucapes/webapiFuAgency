@@ -11,5 +11,7 @@ namespace Employee.Repository
         public Task<ImpiegatoModel> GetImpiegatoByEntrId(int entrId);
 
         public Task<int> AddImpiegato(ImpiegatoModel impiegato);
+
+        public Task UpdateImpiegato(int entrId, ImpiegatoModel impiegatoModel);
     }
 }

@@ -42,6 +42,14 @@ namespace WebApiFuAgency.Controllers
             
         }
 
+        [HttpPut("{entrId}")]
+        public async Task<IActionResult> UpdateImpiegato([FromRoute] int entrId,[FromBody] ImpiegatoModel impiegatoModel)
+        {
+             await _impiegatiRepository.UpdateImpiegato(entrId, impiegatoModel);
+            return Ok(entrId);
+
+        }
+
 
     }
 }
