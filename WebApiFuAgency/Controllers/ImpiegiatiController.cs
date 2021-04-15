@@ -1,6 +1,7 @@
 ﻿using Employee.Models;
 using Employee.Repository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -42,13 +43,15 @@ namespace WebApiFuAgency.Controllers
             
         }
 
-        [HttpPut("{entrId}")]
-        public async Task<IActionResult> UpdateImpiegato([FromRoute] int entrId,[FromBody] ImpiegatoModel impiegatoModel)
+        [HttpPatch("{entrId}")]
+        public async Task<IActionResult> UpdateImpiegato([FromRoute] int entrId,[FromBody] JsonPatchDocument impiegatoModel)
         {
              await _impiegatiRepository.UpdateImpiegato(entrId, impiegatoModel);
             return Ok(entrId);
 
         }
+
+
 
 
     }

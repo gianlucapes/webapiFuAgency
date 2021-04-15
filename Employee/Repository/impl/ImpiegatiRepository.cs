@@ -1,6 +1,7 @@
 ﻿using Employee.Data;
 using Employee.Entity;
 using Employee.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -65,7 +66,7 @@ namespace Employee.Repository
             return records;
         }
 
-        public async Task UpdateImpiegato(int entrId, ImpiegatoModel impiegatoModel)
+        public async Task UpdateAllImpiegato(int entrId, ImpiegatoModel impiegatoModel)
         {
             var _impiegato = new Impiegato()
             {
@@ -80,6 +81,18 @@ namespace Employee.Repository
             _impiegatiContext.Impiegato.Update(_impiegato);
             await _impiegatiContext.SaveChangesAsync();
          
+
+        }
+
+        public async Task UpdateImpiegato(int entrId, JsonPatchDocument impiegatoModel)
+        {
+            var impiegato = await _impiegatiContext.Impiegato.FindAsync(entrId);
+
+            if(impiegato != null)
+            {
+                impiegatoModel.ApplyTo(impiegato);
+                await _impiegatiContext.SaveChangesAsync();
+            }
 
         }
     }

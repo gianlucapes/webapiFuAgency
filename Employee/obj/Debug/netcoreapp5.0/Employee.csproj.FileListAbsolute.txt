@@ -1,0 +1,14 @@
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp5.0\Employee.deps.json
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp5.0\Employee.runtimeconfig.json
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp5.0\Employee.runtimeconfig.dev.json
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp5.0\Employee.dll
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp5.0\ref\Employee.dll
+C:\angular\WebApiFuAgency\Employee\bin\Debug\netcoreapp5.0\Employee.pdb
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.GeneratedMSBuildEditorConfig.editorconfig
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.AssemblyInfoInputs.cache
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.AssemblyInfo.cs
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.csproj.CoreCompileInputs.cache
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.dll
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\ref\Employee.dll
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.pdb
+C:\angular\WebApiFuAgency\Employee\obj\Debug\netcoreapp5.0\Employee.genruntimeconfig.cache
