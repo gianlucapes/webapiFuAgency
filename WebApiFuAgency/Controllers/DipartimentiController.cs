@@ -1,4 +1,5 @@
 ﻿using Employee.Models;
+using Employee.Repository;
 using Employee.Repository.impl;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,8 +14,8 @@ namespace WebApiFuAgency.Controllers
     [ApiController]
     public class DipartimentiController : ControllerBase
     {
-        private readonly DipartimentiRepository _dipartimentiRepository;
-        public DipartimentiController(DipartimentiRepository dipartimentiRepository)
+        private readonly IDipartimentiRepository _dipartimentiRepository;
+        public DipartimentiController(IDipartimentiRepository dipartimentiRepository)
         {
             this._dipartimentiRepository = dipartimentiRepository;
         }

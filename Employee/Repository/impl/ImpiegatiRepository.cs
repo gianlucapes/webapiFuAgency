@@ -1,4 +1,5 @@
-﻿using Employee.Data;
+﻿using AutoMapper;
+using Employee.Data;
 using Employee.Entity;
 using Employee.Models;
 using Microsoft.AspNetCore.JsonPatch;
@@ -15,9 +16,12 @@ namespace Employee.Repository
     {
 
         private readonly RolmexContext _rolmexContext;
-        public ImpiegatiRepository(RolmexContext rolmexContext)
+        private readonly IMapper _mapper;
+
+        public ImpiegatiRepository(RolmexContext rolmexContext, IMapper mapper)
         {
             this._rolmexContext = rolmexContext;
+            this._mapper = mapper;
         }
 
         public async Task<int> AddImpiegato(ImpiegatoModel impiegato)
@@ -47,32 +51,14 @@ namespace Employee.Repository
 
         public async Task<List<ImpiegatoModel>> GetAllImpiegati()
         {
-            var records = await _rolmexContext.Impiegato.Select(x => new ImpiegatoModel()
-                 {
-                EntrepriseId = x.EntrepriseId,
-                Nome = x.Nome,
-                Cognome = x.Cognome,
-                Qualifica = x.Qualifica,
-                Telefono = x.Telefono,
-                RackingPoints = x.RakingPoints,
-                 }).ToListAsync();
-
-            return records;
+            var records = await _rolmexContext.Impiegato.ToListAsync();
+            return _mapper.Map<List<ImpiegatoModel>>(records);
         }
 
         public async Task<ImpiegatoModel> GetImpiegatoByEntrId(int entrId)
         {
-            var records = await _rolmexContext.Impiegato.Where(x => x.EntrepriseId == entrId).Select(x => new ImpiegatoModel()
-            {
-                EntrepriseId = x.EntrepriseId,
-                Nome = x.Nome,
-                Cognome = x.Cognome,
-                Qualifica = x.Qualifica,
-                Telefono = x.Telefono,
-                RackingPoints = x.RakingPoints,
-            }).FirstOrDefaultAsync();
-
-            return records;
+            var impiegato = await _rolmexContext.Impiegato.FindAsync(entrId);
+            return _mapper.Map<ImpiegatoModel>(impiegato);
         }
 
         public async Task UpdateAllImpiegato(int entrId, ImpiegatoModel impiegatoModel)

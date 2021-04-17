@@ -35,6 +35,14 @@ namespace WebApiFuAgency
             });
             services.AddHealthChecks();
 
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin();
+                });
+            });
+
             services.AddTransient<IImpiegatiRepository, ImpiegatiRepository>();
             services.AddTransient<IDipartimentiRepository, DipartimentiRepository>();
 
@@ -52,6 +60,8 @@ namespace WebApiFuAgency
             app.UseRouting();
 
             app.UseHttpsRedirection();
+
+            app.UseCors();
 
             app.UseEndpoints(endpoint =>{
                 endpoint.MapControllers();
