@@ -6,15 +6,16 @@ using System.Text;
 
 namespace Employee.Data
 {
-   public class ImpiegatiContext : DbContext
+   public class RolmexContext : DbContext
    {
-        public ImpiegatiContext(DbContextOptions<ImpiegatiContext> option)
+        public RolmexContext(DbContextOptions<RolmexContext> option)
             : base(option)
         {
 
         }
         public DbSet<Impiegato> Impiegato { get; set; }
 
+        public DbSet<Dipartimenti> Dipartimenti { get; set; }
       
    }
 }

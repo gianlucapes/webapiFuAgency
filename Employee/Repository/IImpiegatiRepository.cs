@@ -16,5 +16,7 @@ namespace Employee.Repository
         public Task UpdateAllImpiegato(int entrId, ImpiegatoModel impiegatoModel);
 
         public Task UpdateImpiegato(int entrId, JsonPatchDocument impiegatoModel);
+
+        public Task DeleteImpiegato(int EntrPrs);
     }
 }

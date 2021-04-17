@@ -32,7 +32,10 @@ namespace WebApiFuAgency.Controllers
         public async Task<IActionResult> GetImpiegatoByEntrId([FromRoute] int entrId)
         {
             var impiegato = await _impiegatiRepository.GetImpiegatoByEntrId(entrId);
-            return Ok(impiegato);
+            if (impiegato != null)
+                return Ok(impiegato);
+            else
+                return Ok("Non è stato trovato nessun impiegato");
         }
 
         [HttpPost("")]
@@ -48,8 +51,19 @@ namespace WebApiFuAgency.Controllers
         {
              await _impiegatiRepository.UpdateImpiegato(entrId, impiegatoModel);
             return Ok(entrId);
+        }
+
+
+        [HttpDelete("{entrId}")]
+        public async Task<IActionResult> UpdateImpiegato([FromRoute] int entrId)
+        {
+            await _impiegatiRepository.DeleteImpiegato(entrId);
+            return Ok(entrId);
 
         }
+
+
+
 
 
 

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Employee.Models;
+using Employee.Repository.impl;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +13,36 @@ namespace WebApiFuAgency.Controllers
     [ApiController]
     public class DipartimentiController : ControllerBase
     {
-        
+        private readonly DipartimentiRepository _dipartimentiRepository;
+        public DipartimentiController(DipartimentiRepository dipartimentiRepository)
+        {
+            this._dipartimentiRepository = dipartimentiRepository;
+        }
+        [HttpPost("")]
+        public async Task<IActionResult> AddDipartimenti([FromBody]DipartimentoModel dipartimentiModel)
+        {
+           await _dipartimentiRepository.AddDipartimento(dipartimentiModel);
+            return Ok(dipartimentiModel.Nome);
+
+        }
+        [HttpGet("")]
+        public async Task<IActionResult> GetAllDipartimenti()
+        {
+         var dipartimenti = await _dipartimentiRepository.GetAllDipartimenti();
+            return Ok(dipartimenti);
+        }
+
+        [HttpGet("{geoCode}")]
+        public async Task<IActionResult> GetDipartimentoByGeoCode([FromRoute]int geoCode)
+        {
+            var dipartimento = await _dipartimentiRepository.GetDipartimentiByGeoCode(geoCode);
+            return Ok(dipartimento);
+        }
+        [HttpGet("{luogo}")]
+        public async Task<IActionResult> GetDipartimentoLuogo([FromRoute] string luogo)
+        {
+            var dipartimento = await _dipartimentiRepository.GetDipartimentiByLuogo(luogo);
+            return Ok(dipartimento);
+        }
     }
 }

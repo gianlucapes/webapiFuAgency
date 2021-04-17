@@ -21,5 +21,9 @@ namespace Employee.Entity
         public string Telefono { get; set; }
 
         public int RakingPoints { get; set; }
+
+        public string ImmagineProfilo { get; set; }
+
+        public int Dipartimento { get; set; }
    }
 }

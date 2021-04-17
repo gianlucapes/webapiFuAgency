@@ -1,12 +1,15 @@
-﻿using Employee.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Employee.Models
+namespace Employee.Entity
 {
-   public class DipartimentoModel
+    public class Dipartimenti
     {
+        [Key]
         public int GeoCode { get; set; }
 
         public string Nome { get; set; }
@@ -17,6 +20,7 @@ namespace Employee.Models
 
         public string ImmagineDipartimento { get; set; }
 
-        public Impiegato Leader { get; set; }
+        public Impiegato Leader {get;set;}
+
     }
 }

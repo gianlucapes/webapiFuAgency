@@ -14,10 +14,10 @@ namespace Employee.Repository
     public class ImpiegatiRepository : IImpiegatiRepository
     {
 
-        private readonly ImpiegatiContext _impiegatiContext;
-        public ImpiegatiRepository(ImpiegatiContext impiegatiContext)
+        private readonly RolmexContext _rolmexContext;
+        public ImpiegatiRepository(RolmexContext rolmexContext)
         {
-            this._impiegatiContext = impiegatiContext;
+            this._rolmexContext = rolmexContext;
         }
 
         public async Task<int> AddImpiegato(ImpiegatoModel impiegato)
@@ -28,17 +28,26 @@ namespace Employee.Repository
              Cognome = impiegato.Cognome,
              Qualifica= impiegato.Qualifica,
              RakingPoints = impiegato.RackingPoints,
-             Telefono = impiegato.Telefono
+             ImmagineProfilo = impiegato.ImmagineProfilo,
+             Telefono = impiegato.Telefono,
+             Dipartimento = impiegato.Dipartimento
             };
 
-            _impiegatiContext.Impiegato.Add(_impiegato);
-           await _impiegatiContext.SaveChangesAsync();
+            _rolmexContext.Impiegato.Add(_impiegato);
+           await _rolmexContext.SaveChangesAsync();
             return impiegato.EntrepriseId;
+        }
+
+        public async Task DeleteImpiegato(int EntrPrs)
+        {
+            var impiegato = new Impiegato() { EntrepriseId = EntrPrs};
+            _rolmexContext.Remove(impiegato);
+            await _rolmexContext.SaveChangesAsync();
         }
 
         public async Task<List<ImpiegatoModel>> GetAllImpiegati()
         {
-            var records = await _impiegatiContext.Impiegato.Select(x => new ImpiegatoModel()
+            var records = await _rolmexContext.Impiegato.Select(x => new ImpiegatoModel()
                  {
                 EntrepriseId = x.EntrepriseId,
                 Nome = x.Nome,
@@ -53,7 +62,7 @@ namespace Employee.Repository
 
         public async Task<ImpiegatoModel> GetImpiegatoByEntrId(int entrId)
         {
-            var records = await _impiegatiContext.Impiegato.Where(x => x.EntrepriseId == entrId).Select(x => new ImpiegatoModel()
+            var records = await _rolmexContext.Impiegato.Where(x => x.EntrepriseId == entrId).Select(x => new ImpiegatoModel()
             {
                 EntrepriseId = x.EntrepriseId,
                 Nome = x.Nome,
@@ -78,20 +87,20 @@ namespace Employee.Repository
                 Telefono = impiegatoModel.Telefono
             };
 
-            _impiegatiContext.Impiegato.Update(_impiegato);
-            await _impiegatiContext.SaveChangesAsync();
+            _rolmexContext.Impiegato.Update(_impiegato);
+            await _rolmexContext.SaveChangesAsync();
          
 
         }
 
         public async Task UpdateImpiegato(int entrId, JsonPatchDocument impiegatoModel)
         {
-            var impiegato = await _impiegatiContext.Impiegato.FindAsync(entrId);
+            var impiegato = await _rolmexContext.Impiegato.FindAsync(entrId);
 
             if(impiegato != null)
             {
                 impiegatoModel.ApplyTo(impiegato);
-                await _impiegatiContext.SaveChangesAsync();
+                await _rolmexContext.SaveChangesAsync();
             }
 
         }
