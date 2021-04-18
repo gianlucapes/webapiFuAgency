@@ -1,9 +1,11 @@
 ﻿using Employee.Data;
+using Employee.Models;
 using Employee.Repository;
 using Employee.Repository.impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -45,9 +47,14 @@ namespace WebApiFuAgency
 
             services.AddTransient<IImpiegatiRepository, ImpiegatiRepository>();
             services.AddTransient<IDipartimentiRepository, DipartimentiRepository>();
+            services.AddTransient<IAccountRepository,AccountRepository>();
+
 
             services.AddDbContext<RolmexContext>(option => option.UseSqlServer(Configuration.GetConnectionString("FuAgency"), b => b.MigrationsAssembly("WebApiFuAgency")));
             services.AddAutoMapper(typeof(Startup));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<RolmexContext>()
+                .AddDefaultTokenProviders();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

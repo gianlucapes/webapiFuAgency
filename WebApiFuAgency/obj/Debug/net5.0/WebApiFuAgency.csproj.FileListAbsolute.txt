@@ -67,3 +67,8 @@ C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.M
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\AutoMapper.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
