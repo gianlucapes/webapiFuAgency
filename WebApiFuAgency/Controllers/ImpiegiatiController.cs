@@ -1,5 +1,6 @@
 ﻿using Employee.Models;
 using Employee.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -12,6 +13,7 @@ namespace WebApiFuAgency.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class ImpiegiatiController : ControllerBase
     {
         private readonly IImpiegatiRepository _impiegatiRepository;

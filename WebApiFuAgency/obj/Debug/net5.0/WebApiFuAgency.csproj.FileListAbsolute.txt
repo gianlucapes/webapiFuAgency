@@ -22,7 +22,6 @@ C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.MvcApplicationPartsAssemblyInfo.cs
 C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.csproj.CopyComplete
 C:\angular\WebApiFuAgency\WebApiFuAgency\obj\Debug\net5.0\WebApiFuAgency.csprojAssemblyReference.cache
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Employee.dll
@@ -72,3 +71,4 @@ C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.C
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
 C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\angular\WebApiFuAgency\WebApiFuAgency\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
